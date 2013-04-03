@@ -28,3 +28,5 @@ public/packages/
 .redcar
 .idea
 tunnlr.yml
+/db/
+/shared/

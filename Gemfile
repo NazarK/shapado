@@ -18,8 +18,8 @@ end
 gem 'maruku'
 
 # ui
-gem 'haml', '>= 3.1.3'
-gem 'sass', '>= 3.1.10'
+gem 'haml' #, '>= 3.1.3'
+gem 'sass' #, '3.1.2'
 gem 'compass-colors', '0.9.0'
 gem 'fancy-buttons', '1.1.1'
 gem 'kaminari'
@@ -32,9 +32,9 @@ gem 'bson', '1.4.0'
 gem 'bson_ext', '1.4.0'
 
 gem 'mongo', '1.4.0'
-gem 'mongoid', :git => 'git://github.com/mongoid/mongoid.git', :branch => '2.4.0-stable'
+gem 'mongoid', '2.4.0'#, :git => 'git://github.com/mongoid/mongoid.git', :branch => '2.4.0-stable'
 
-gem 'mongoid_ext', :git => 'git://github.com/dcu/mongoid_ext.git'
+gem 'mongoid_ext', '0.7.1' #:git => 'git://github.com/dcu/mongoid_ext.git'
 
 gem 'mongo_store', :git => 'https://github.com/Houdini/mongo_store.git'
 gem 'redis'
@@ -45,7 +45,7 @@ gem 'redis-rails'
 gem 'whatlanguage', '1.0.0'
 gem 'uuidtools', '~> 2.1.1'
 gem 'magent', '0.6.2'
-gem 'bug_hunter', :git => 'git://github.com/ricodigo/bug_hunter.git'
+#gem 'bug_hunter', :git => 'git://github.com/ricodigo/bug_hunter.git'
 
 gem 'goalie', '~> 0.0.4'
 gem 'dynamic_form'
@@ -53,8 +53,8 @@ gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
 
 gem 'rack-recaptcha', '0.2.2', :require => 'rack/recaptcha'
 
-gem 'twitter-text', '1.1.8'
-gem 'twitter_oauth'
+#gem 'twitter-text', '1.1.8'
+#gem 'twitter_oauth'
 gem 'social_widgets', :git => 'https://git.gitorious.org/social_widgets/social_widgets.git'
 gem 'stripe'
 gem 'pdfkit' # apt-get install wkhtmltopdf
@@ -84,7 +84,7 @@ gem 'xapit', :git => 'git://github.com/kuadrosx/xapit.git'
 group :assets do
   gem 'compass-rails'
   gem 'compass'
-  gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: '3-2-stable'
+  gem 'sass-rails' #, git: 'https://github.com/rails/sass-rails.git', branch: '3-2-stable'
   gem 'uglifier'
 end
 gem 'yui-compressor'
@@ -100,7 +100,8 @@ end
 group :scripts do
   gem 'eventmachine', '~> 0.12.10'
   gem 'em-websocket', '~> 0.3.0'
-  gem 'twitter', '1.7.2'
+
+#  gem 'twitter', '1.7.2'
 end
 
 group :test do
@@ -126,3 +127,5 @@ group :development do
   gem 'ruby-prof'
   gem 'tunnlr_connector', :git => 'git://github.com/dcu/tunnlr_connector.git', :branch => 'patch-1', :require => 'tunnlr'
 end
+
+gem 'thin'

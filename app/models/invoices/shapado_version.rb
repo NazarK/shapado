@@ -36,7 +36,7 @@ class ShapadoVersion
   end
 
   def is_private?
-    self.private
+    self.private rescue false
   end
 
   def has_custom_themes?

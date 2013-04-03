@@ -25,8 +25,7 @@ namespace :setup do
 
   desc "Create the default group"
   task :default_group => [:environment] do
-    default_tags = %w[technology business science politics religion
-                               sports entertainment gaming lifestyle offbeat]
+    default_tags = %w[technology business science politics entertainment gaming lifestyle offbeat]
 
     group_language = AppConfig.default_language.blank? ? "en" : AppConfig.default_language
 

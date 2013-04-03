@@ -58,35 +58,35 @@ $normalRadius: 5px
 $bigRadius: 20px
 $hugeRadius: 50px
 
-=none-radius($noneRadius)
+=none-radius
   -moz-border-radius: $noneRadius
   -webkit-border-radius: $noneRadius
   -o-border-radius: $noneRadius
   -khtml-border-radius: $noneRadius
   border-radius: $noneRadius
 
-=small-radius($smallRadius)
+=small-radius
   -moz-border-radius: $smallRadius
   -webkit-border-radius: $smallRadius
   -o-border-radius: $smallRadius
   -khtml-border-radius: $smallRadius
   border-radius: $smallRadius
 
-=normal-radius($normalRadius)
+=normal-radius
   -moz-border-radius: $normalRadius
   -webkit-border-radius: $normalRadius
   -o-border-radius: $normalRadius
   -khtml-border-radius: $normalRadius
   border-radius: $normalRadius
 
-=big-radius($bigRadius)
+=big-radius
   -moz-border-radius: $bigRadius
   -webkit-border-radius: $bigRadius
   -o-border-radius: $bigRadius
   -khtml-border-radius: $bigRadius
   border-radius: $bigRadius
 
-=huge-radius($hugeRadius)
+=huge-radius
   -moz-border-radius: $hugeRadius
   -webkit-border-radius: $hugeRadius
   -o-border-radius: $hugeRadius
@@ -100,21 +100,21 @@ $outer: 0 2px 3px #999
 $inner: inset 0 0 3px #999
 $none: 0 0 0 transparent
 
-=outer-shadow($outer)
+=outer-shadow
   -moz-box-shadow: $outer
   -webkit-box-shadow: $outer
   -o-box-shadow: $outer
   -khtml-box-shadow: $outer
   box-shadow: $outer
 
-=inner-shadow($shadow)
+=inner-shadow
   -moz-box-shadow: $inner
   -webkit-box-shadow: $inner
   -o-box-shadow: $inner
   -khtml-box-shadow: $inner
   box-shadow: $inner
 
-=none-shadow($none)
+=none-shadow
   -moz-box-shadow: $none
   -webkit-box-shadow: $none
   -o-box-shadow: $none
@@ -125,7 +125,7 @@ $none: 0 0 0 transparent
 $shadow: 0 0 10px #000
 $menu: 0 2px 3px #999
 
-=box-shadow($shadow)
+=box-shadow
   $shadow: unquote($shadow)
   -moz-box-shadow: $shadow
   -webkit-box-shadow: $shadow
@@ -133,7 +133,7 @@ $menu: 0 2px 3px #999
   -khtml-box-shadow: $shadow
   box-shadow: $shadow
 
-=menu-shadow($shadow)
+=menu-shadow
   $shadow: unquote($menu)
   -moz-box-shadow: $menu
   -webkit-box-shadow: $menu
