@@ -168,7 +168,8 @@ class ApplicationController < ActionController::Base
   helper_method :scoped_conditions
 
   def set_layout
-    if !user_signed_in? && request.host == AppConfig.domain && request.path == '/'
+    #means never
+    if false && (!user_signed_in? && request.host == AppConfig.domain && request.path == '/')
       'shapadocom'
     elsif env && env['HTTP_X_PJAX'].present? && !params[:_refresh]
       nil
