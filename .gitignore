@@ -30,3 +30,5 @@ public/packages/
 tunnlr.yml
 /db/
 /shared/
+/public/assets/
+/etc/
