@@ -36,7 +36,7 @@ gem 'mongoid', '2.4.0'#, :git => 'git://github.com/mongoid/mongoid.git', :branch
 
 gem 'mongoid_ext', '0.7.1' #:git => 'git://github.com/dcu/mongoid_ext.git'
 
-gem 'mongo_store', :git => 'https://github.com/Houdini/mongo_store.git'
+gem 'mongo_store', :git => 'git://github.com/Houdini/mongo_store.git'
 gem 'redis'
 gem 'redis-store'
 gem 'redis-rails'
