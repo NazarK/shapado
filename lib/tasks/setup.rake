@@ -25,8 +25,6 @@ namespace :setup do
 
   desc "Create the default group"
   task :default_group => [:environment] do
-    default_tags = []#%w[technology business science politics entertainment gaming lifestyle offbeat]
-
     group_language = AppConfig.default_language.blank? ? "en" : AppConfig.default_language
 
     subdomain = AppConfig.application_name.gsub(/[^A-Za-z0-9\s\-]/, "")[0,20].strip.gsub(/\s+/, "-").downcase
@@ -37,9 +35,12 @@ namespace :setup do
                               :domain => AppConfig.domain,
                               :description => "question-and-answer website",
                               :legend => "question and answer website",
-                              :default_tags => default_tags,
+                              :default_tags => [],
+                              :auth_providers => [],
                               :state => "active",
                               :language => AppConfig.default_language)
+
+
 
     if admin = User.where(:login => "admin").first
       default_group.owner = admin
@@ -48,6 +49,12 @@ namespace :setup do
     default_group.add_member(admin, "owner")
     default_group.logo = File.open(Rails.root+"app/assets/images/logo.png")
     default_group.save
+
+    default_group.reload
+    default_group.default_tags = %w[technology business science politics entertainment gaming lifestyle offbeat]
+    default_group.auth_providers = ["Google","Twitter","Facebook"]
+    default_group.save
+
   end
 
   task :default_theme => :environment do
