@@ -53,8 +53,8 @@ gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
 
 gem 'rack-recaptcha', '0.2.2', :require => 'rack/recaptcha'
 
-#gem 'twitter-text', '1.1.8'
-#gem 'twitter_oauth'
+gem 'twitter-text', '1.1.8'
+gem 'twitter_oauth'
 gem 'social_widgets', :git => 'https://git.gitorious.org/social_widgets/social_widgets.git'
 gem 'stripe'
 gem 'pdfkit' # apt-get install wkhtmltopdf

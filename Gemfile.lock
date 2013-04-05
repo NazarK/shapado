@@ -429,6 +429,12 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-text (1.1.8)
+      actionpack
+    twitter_oauth (0.4.4)
+      json (>= 1.1.9)
+      mime-types (>= 1.16)
+      oauth (>= 0.4.1)
     tzinfo (0.3.37)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -533,6 +539,8 @@ DEPENDENCIES
   therubyracer
   thin
   tunnlr_connector!
+  twitter-text (= 1.1.8)
+  twitter_oauth
   uglifier
   unicorn (= 4.1.1)
   uuidtools (~> 2.1.1)
