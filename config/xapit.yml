@@ -10,6 +10,6 @@ test:
 
 production:
   database_path: "db/xapit_production"
-  enabled: true
-  spelling: true
-#  server: "http://localhost:9292"
+#  enabled: true
+#  spelling: true
+  server: "http://localhost:9292"
