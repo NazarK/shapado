@@ -4,6 +4,8 @@
 # Author: Joetaras
 roa-tara: 
   close_requests: 
+    edit: 
+      title: Cange ìa richieste de chiusure
     form: 
       dupe: A doppie
       no_question: None 'na domande
