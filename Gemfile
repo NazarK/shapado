@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.11'
 
 if RUBY_PLATFORM !~ /mswin|mingw/
   gem 'rdiscount', :git => 'git://github.com/ricodigo/rdiscount.git'
@@ -72,7 +72,7 @@ gem 'oa-oauth', '~> 0.3.0', :require => 'omniauth/oauth'
 gem 'multiauth', :git => 'http://github.com/dcu/multiauth.git'
 
 gem 'orm_adapter'
-gem 'devise', '~> 1.4.0'
+gem 'devise', '1.4.7'
 
 gem 'whenever', :require => false
 gem 'rack-ssl', :require => false
