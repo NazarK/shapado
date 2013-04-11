@@ -129,3 +129,4 @@ group :development do
 end
 
 gem 'thin'
+gem 'spork'

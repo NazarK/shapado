@@ -1,3 +1,7 @@
+require 'openssl'
+#for facebook login to work on localhost.lan
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 Shapado::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 

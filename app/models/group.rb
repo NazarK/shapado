@@ -168,6 +168,7 @@ class Group
 
   before_create :disallow_javascript
   before_update :disallow_javascript
+  before_save :set_default_shapado_version
   before_save :modify_attributes
   before_save :check_latex
   before_create :create_widget_lists
@@ -175,6 +176,16 @@ class Group
   before_create :set_shapado_version
   after_create :create_default_tags
 
+  def set_default_shapado_version
+    if !self.shapado_version_id
+      if ShapadoVersion.count==0
+        ShapadoVersion.create :token=>"free",:price=>0
+      end
+      self.shapado_version_id = ShapadoVersion.first.id
+      self.save
+    end
+  end
+  
   def reset_custom_domain!
     self.domain = "#{self.slug}.#{AppConfig.domain}"
     self.save

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe AnswersController do
   include Devise::TestHelpers
 
-  before (:each) do
+  before(:each) do
     stub_group
     @user = Fabricate(:user)
     stub_authentication @user
@@ -17,7 +17,7 @@ describe AnswersController do
   end
 
   describe "GET 'history'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question)
       @answer = Fabricate(:answer, :question => @question, :group => @question.group)
       stub_group(@question.group)
@@ -30,7 +30,7 @@ describe AnswersController do
   end
 
   describe "GET 'diff'" do
-    before (:each) do
+    before(:each) do
     end
 
     it "should be successful" do
@@ -40,7 +40,7 @@ describe AnswersController do
   end
 
   describe "GET 'revert'" do
-    before (:each) do
+    before(:each) do
     end
 
     it "should be successful" do
@@ -50,7 +50,7 @@ describe AnswersController do
   end
 
   describe "GET 'show'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question)
       @answer = Fabricate(:answer, :question => @question, :group => @question.group)
       stub_group(@question.group)
@@ -76,7 +76,7 @@ describe AnswersController do
 #   end
 
   describe "GET 'edit'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question)
       @answer = Fabricate(:answer,
                             :question => @question,
@@ -93,7 +93,7 @@ describe AnswersController do
   end
 
   describe "POST 'create'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question)
       @answer = Fabricate(:answer,
                             :question => @question,
@@ -108,7 +108,7 @@ describe AnswersController do
   end
 
   describe "PUT 'update'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question, :user => @user)
       @answer = Fabricate(:answer,
                             :question => @question,
@@ -125,7 +125,7 @@ describe AnswersController do
   end
 
   describe "DELETE 'destroy'" do
-    before (:each) do
+    before(:each) do
       @question = Fabricate(:question, :user => @user)
       @answer = Fabricate(:answer,
                             :question => @question,
