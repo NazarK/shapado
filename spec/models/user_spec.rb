@@ -6,6 +6,15 @@ describe User do
     Thread.current[:current_user] = @user
   end
 
+  it 'should autogenerate dummy password for facebook accounts' do
+    u = User.new
+    u.email = "email@email.com"
+    u.login = "login"
+    u.facebook_token = "something"
+    u.save
+    assert u.save
+  end
+
   describe "module/plugin inclusions (optional)" do
   end
 

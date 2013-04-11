@@ -67,9 +67,9 @@ gem 'rubyzip', '0.9.4', :require => 'zip/zip'
 gem 'newrelic_rpm'
 
 # authentication
-gem 'omniauth',
-gem 'oa-openid',  :require => 'omniauth/openid'
-gem 'oa-oauth', :require => 'omniauth/oauth'
+gem 'omniauth', '~> 0.3.0'
+gem 'oa-openid', '~> 0.3.0', :require => 'omniauth/openid'
+gem 'oa-oauth', '~> 0.3.0', :require => 'omniauth/oauth'
 
 gem 'multiauth', :git => 'http://github.com/dcu/multiauth.git'
 

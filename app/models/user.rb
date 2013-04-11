@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'digest/md5'
 
 class User
   include Mongoid::Document
@@ -113,6 +114,15 @@ class User
   before_save :update_languages
 
   attr_accessible :remember_me
+
+  #patch for facebook login to work
+  before_validation :generate_password
+  def generate_password
+    #detect facebook account with empty password
+    if !self.facebook_token.blank? && self.password.blank? && self.encrypted_password.blank?
+      self.password = Digest::MD5.digest((10000000+rand(10000000)).to_s+Time.now.to_s)
+    end
+  end
 
   def custom_domain_owned_groups
     groups = Group.where(:owner_id => self.id)
