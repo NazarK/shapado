@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: syck-pecl
 # Author: Hydra
+# Author: Yfdyh000
 zh-CN: 
   widgets: 
     about: 
@@ -11,7 +12,7 @@ zh-CN:
     ask_question: 
       ask: 问
       footer: 查看在 %{group} 上所有问题
-      title: 问问题：
+      title: 提出问题：
     badges: 
       description: 这个工具将显示用户最近获得的徽章。
       see_all: 查看所有的徽章
