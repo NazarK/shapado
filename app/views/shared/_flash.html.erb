@@ -1,0 +1,11 @@
+<style>
+.flash.alert {
+  color: red;
+}
+</style>
+<% flash=flash() %>
+<% flash.each do |key, msg| %>
+  <div class='flash <%= key %>'>
+    <p><%= raw(msg) %></p>
+  </div>
+<% end %>
