@@ -1,0 +1,30 @@
+body {
+  background: #fff;
+  font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;
+}
+#container #columns {
+  border: none;
+}
+
+ul.content-tabs {
+  border: none;
+}
+
+#container > footer {
+  border-top: 2px solid black;
+}
+
+.filters {
+  border: none;
+}
+.activity.filters {
+  border-bottom: 1px solid black;
+}
+
+ul.content-tabs li a  {
+  border: none;
+  font-size: 16px;
+}
+ul.content-tabs {
+  margin-top: 20px;
+}
